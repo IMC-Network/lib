@@ -1,3 +1,5 @@
+var loaderRotationAngle = 0;
+
 function dialog(title, content, buttons = [{text: "Close", onclick: "closeDialog();", type: "primary"}], allowEscape = true) {
     $(".dialog").html(`
         <div class="dialogTitle"></div>
