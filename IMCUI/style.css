@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://storage.googleapis.com/non-spec-apps/mio-icons/latest/sharp.css");
 
 :root {
     --backgroundColour: #f8f8f8;
@@ -75,4 +76,75 @@ nav > a:hover {
 
 nav > a > img {
     height: 100%;
+}
+
+.dialogBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
+    width: calc(40vw - 20px);
+    height: calc(40vh - 20px);
+    z-index: 3;
+    padding: 10px;
+    clip-path: var(--clipPath);
+    background-color: white;
+    color: black;
+}
+
+.dialogTitle {
+    margin: -10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: var(--uiColour);
+    color: white;
+}
+
+.dialogContent {
+    margin: -10px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    height: calc(100% - 110px);
+    overflow-y: auto;
+}
+
+.dialogActions {
+    margin: -10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    text-align: right;
+}
+
+.loader {
+    width: 100px;
+}
+
+@media (max-width: 800px) {
+    .dialog {
+        left: 10vw;
+        width: calc(80vw - 20px);
+    }
+}
+
+@media (max-height: 500px) {
+    .dialog {
+        top: 20vh;
+        left: 30vw;
+        width: calc(40vw - 20px);
+        height: calc(60vh - 20px);
+    }
 }
