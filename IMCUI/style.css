@@ -11,17 +11,28 @@
     --uiInputColour: #e5e5e5;
     --uiInputTextColour: black;
     --uiCardBorderColour: #e5e5e5;
+    --clipPath: polygon(10px 0, 0 10px, 0 100%, calc(100% - 10px) 100%, 100% calc(100% - 10px), 100% 0);
 }
 
 * {
     font-family: "Roboto", sans-serif;
 }
 
-body {
+html {
+    background: var(--backgroundColour);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+html, body {
+    min-height: calc(100% - 50px);
     margin: 0;
     margin-top: 50px;
-    background-color: white;
     color: black;
+}
+
+body * {
+    background: transparent;
 }
 
 a {
@@ -31,6 +42,64 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: var(--uiColour);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    clip-path: var(--clipPath);
+    background-color: var(--uiColour);
+    color: white;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: var(--uiHoverColour);
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: var(--uiInputColour);
+    color: black;
+    cursor: default;
+}
+
+button.flat {
+    background-color: inherit;
+    color: var(--uiFlatTextColour);
+}
+
+button.flat:disabled {
+    background-color: inherit;
+    color: var(--coverTextColour);
+}
+
+input {
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    clip-path: var(--clipPath);
+    background-color: var(--uiInputColour);
+    color: black;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+input.spaced {
+    margin: 5px;
 }
 
 section {
@@ -76,6 +145,26 @@ nav > a:hover {
 
 nav > a > img {
     height: 100%;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+*[dir="rtl"] .left {
+    text-align: right;
+}
+
+*[dir="rtl"] .right {
+    text-align: left;
 }
 
 .dialogBackground {
