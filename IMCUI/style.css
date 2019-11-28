@@ -203,8 +203,8 @@ nav .menu {
 nav .menu a {
     display: block;
     padding: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: transparent;
     color: var(--navMenuForegroundColour);
 }
