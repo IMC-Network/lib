@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://storage.googleapis.com/non-spec-apps/mio-icons/latest/sharp.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Material+icons");
 
 :root {
     --backgroundColour: white;
