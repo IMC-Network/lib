@@ -195,16 +195,27 @@ nav .menu {
     top: 40px;
     left: 0;
     min-width: 200px;
-    padding: 10px;
-    padding-left: 16px;
-    padding-right: 16px;
     background-color: var(--navMenuBackgroundColour);
     color: var(--navMenuForegroundColour);
     font-size: 16px;
 }
 
 nav .menu a {
+    display: block;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: transparent;
     color: var(--navMenuForegroundColour);
+}
+
+nav .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+nav .menu .logo img {
+    height: 30px;
 }
 
 .left {
