@@ -39,6 +39,11 @@ body * {
     background: transparent;
 }
 
+main {
+    min-height: calc(100vh - 75px);
+    margin-bottom: 25px;
+}
+
 main.largeTop {
     margin-top: 50px;
 }
@@ -218,6 +223,45 @@ nav .menu .logo img {
     height: 30px;
 }
 
+footer {
+    padding: 50px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: var(--highlightBackgroundColour);
+}
+
+footer .logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+footer span.header {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+footer a.location {
+    display: block;
+    padding: 5px;
+    color: var(--foregroundColour);
+}
+
+footer a.location:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+footer .split {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+footer .copyright {
+    margin-top: 20px;
+}
+
 .left {
     text-align: left;
 }
@@ -230,6 +274,14 @@ nav .menu .logo img {
     text-align: right;
 }
 
+[dir="rtl"] .left {
+    text-align: right;
+}
+
+[dir="rtl"] .right {
+    text-align: left;
+}
+
 .desktop {
     display: unset;
 }
@@ -238,12 +290,17 @@ nav .menu .logo img {
     display: none;
 }
 
-*[dir="rtl"] .left {
-    text-align: right;
+.split {
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-wrap: wrap;
 }
 
-*[dir="rtl"] .right {
-    text-align: left;
+.split > div {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-grow: 1;
 }
 
 .dialogBackground {
@@ -317,8 +374,6 @@ nav .menu .logo img {
 .loader {
     width: 100px;
 }
-
-/* TODO: Make tablist scroll when overflowing */
 
 .tablist {
     margin-left: -10px;
@@ -470,6 +525,12 @@ nav .menu .logo img {
     }
 }
 
+@media (max-width: 600px) {
+    .split > div {
+        flex-basis: 50%;
+    }
+}
+
 @media (max-width: 800px) {
     .dialog {
         left: 10vw;
@@ -506,9 +567,14 @@ nav .menu .logo img {
     .mobile {
         display: unset;
     }
+
+    .split > div {
+        flex-basis: 100%;
+    }
 }
 
 /* Import overrides */
+
 .material-ui {
     font-size: unset;
 }
