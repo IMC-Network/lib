@@ -2,6 +2,7 @@
 
 :root {
     --backgroundColour: white;
+    --highlightBackgroundColour: #e5e5e5;
     --foregroundColour: black;
     --navBackgroundColour: black;
     --navForegroundColour: white;
@@ -14,7 +15,6 @@
     --uiFlatTextColour: #00b0f0;
     --uiInputColour: #e5e5e5;
     --uiInputTextColour: black;
-    --uiCardBorderColour: #e5e5e5;
     --clipPath: polygon(10px 0, 0 10px, 0 100%, calc(100% - 10px) 100%, 100% calc(100% - 10px), 100% 0);
 }
 
