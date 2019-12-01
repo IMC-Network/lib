@@ -200,9 +200,11 @@ nav .menu {
     top: 40px;
     left: 0;
     min-width: 200px;
+    max-height: calc(100vh - 40px);
     background-color: var(--navMenuBackgroundColour);
     color: var(--navMenuForegroundColour);
     font-size: 16px;
+    overflow-y: auto;
 }
 
 nav .menu a {
@@ -561,7 +563,7 @@ footer .copyright {
 
 @media (max-width: 400px) {
     nav .menu {
-        width: calc(100vw - 32px);
+        width: 100vw;
     }
 
     .desktop {
