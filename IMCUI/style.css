@@ -303,6 +303,7 @@ footer .copyright {
     padding-left: 10px;
     padding-right: 10px;
     flex-grow: 1;
+    flex-basis: 0;
 }
 
 .dialogBackground {
