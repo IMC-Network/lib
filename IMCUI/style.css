@@ -399,6 +399,34 @@ footer .copyright {
     text-decoration: none;
 }
 
+.breadcrumbs {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.breadcrumbs > a {
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: var(--foregroundColour);
+}
+
+.breadcrumbs > a:not(:first-child)::before {
+    content: "\E5CC";
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 5px;
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: normal;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+
+.breadcrumbs > a:first-child {
+    padding-left: 10px;
+}
+
 .itemlist {
     width: 100%;
     white-space: nowrap;
