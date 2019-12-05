@@ -357,6 +357,10 @@ footer .copyright {
     text-align: right;
 }
 
+.dialogActions button {
+    margin-left: 10px;
+}
+
 .mainCard {
     position: absolute;
     top: 100px;
