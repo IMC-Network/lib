@@ -1,8 +1,12 @@
 var loaderRotationAngle = 0;
+var dialogLastFocus = "body";
 
 function dialog(title, content, buttons = [{text: "Close", onclick: "closeDialog();", type: "primary"}], allowEscape = true) {
-    $(".dialog").html(`
-        <div class="dialogTitle"></div>
+    $(".dialog").attr({
+        "role": "dialog",
+        "aria-labelledby": "dialogTitle"
+    }).html(`
+        <div class="dialogTitle" id="dialogTitle"></div>
         <div class="dialogContent"></div>
         <div class="dialogActions"></div>
     `);
@@ -47,11 +51,19 @@ function dialog(title, content, buttons = [{text: "Close", onclick: "closeDialog
 
     $(".dialogBackground").fadeIn();
     $(".dialog").fadeIn();
+
+    dialogLastFocus = document.activeElement;
+
+    $(".dialog").find(":focusable").eq(0).focus();
 }
 
 function closeDialog() {
     $(".dialogBackground").fadeOut();
     $(".dialog").fadeOut();
+
+    $(dialogLastFocus).focus();
+
+    dialogLastFocus = "body";
 }
 
 function openMenu(menuName) {
