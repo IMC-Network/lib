@@ -1,0 +1,23 @@
+.programmesListLoader {
+    padding-top: calc(50vh - 150px);
+    padding-bottom: calc(50vh - 150px);
+    text-align: center;
+}
+
+.programmeTile {
+    display: inline-block;
+    width: calc(25% - 20px);
+    height: calc(20vh - 10px);
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--foregroundColour);
+}
+
+@media (max-width: 550px) {
+    .programmeTile {
+        width: calc(50% - 20px);
+        height: calc(12.5vh - 10px);
+    }
+}
