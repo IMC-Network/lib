@@ -86,6 +86,10 @@ a:hover {
     text-decoration: underline;
 }
 
+div.spacedTop {
+    margin-top: 10px;
+}
+
 button {
     padding: 8px;
     padding-left: 10px;
@@ -262,6 +266,16 @@ footer .split {
 
 footer .copyright {
     margin-top: 20px;
+}
+
+label {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label > span {
+    min-width: 100px;
+    padding: 8px;
 }
 
 .left {
