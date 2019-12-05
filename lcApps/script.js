@@ -40,8 +40,19 @@ firebase.auth().onAuthStateChanged(function(user) {
                 firebase.database().ref("orgs/" + currentUser.orgName + "/programmes").on("value", function(snapshot) {
                     $(".programmesList.myProgrammes").html("");
 
-                    for (var key in snapshot.val()) {
-                        addProgramme(snapshot.val()[key], key);
+                    if (snapshot.val() == null) {
+                        $(".programmesList.myProgrammes").html(`
+                            <p>
+                                It appears that you don't have any programmes
+                                yet. Add programmes in the LiveCloud app by
+                                pressing the <strong>New programme</strong>
+                                button.
+                            </p>
+                        `);
+                    } else {
+                        for (var key in snapshot.val()) {
+                            addProgramme(snapshot.val()[key], key);
+                        }
                     }
                 });
             });
