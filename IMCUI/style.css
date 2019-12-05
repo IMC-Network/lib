@@ -278,6 +278,10 @@ label > span {
     padding: 8px;
 }
 
+label > input {
+    flex: 1;
+}
+
 .left {
     text-align: left;
 }
