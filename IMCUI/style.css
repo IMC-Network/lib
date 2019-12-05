@@ -545,11 +545,6 @@ footer .copyright {
         left: 50px;
         width: calc(100% - 130px);
     }
-
-    .appTile {
-        width: calc(50vw - 20px);
-        height: 25vw;
-    }
 }
 
 @media (max-width: 600px) {
