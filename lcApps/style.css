@@ -1,9 +1,3 @@
-.programmesListLoader {
-    padding-top: calc(50vh - 150px);
-    padding-bottom: calc(50vh - 150px);
-    text-align: center;
-}
-
 .programmeTile {
     display: inline-block;
     width: calc(25% - 20px);
