@@ -283,6 +283,44 @@ label > input {
     flex: 1;
 }
 
+
+
+table, th, td {
+    border-collapse: collapse;
+    border: none;
+}
+
+th, td {
+    margin: 0;
+    padding: 5px;
+}
+
+table {
+    min-width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+tbody tr:nth-child(2n - 1) {
+    background-color: rgb(0, 0, 0, 0.05);
+}
+
+.tableHolder {
+    overflow-x: auto;
+}
+
+.tableColumnName {
+    white-space: nowrap;
+}
+
+.tableColumnButtons {
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+}
+
 .left {
     text-align: left;
 }
