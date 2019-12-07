@@ -8,6 +8,7 @@ var currentUser = {
 function addProgramme(programme, programmeKey) {
     $("<div class='programmeTile'>")
         .text(programme.textShows != false ? programme.name : "")
+        .attr("aria-label", programme.name)
         .css({
             "background-image": programme.thumbnail == null ? "url('https://imcnetwork.cf/LiveCloud/media/Blank%20App.png')" : "url('" + encodeURI(programme.thumbnail) + "')",
             "background-repeat": "no-repeat",
