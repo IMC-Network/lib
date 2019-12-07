@@ -610,6 +610,10 @@ tbody tr:nth-child(2n - 1) {
     grid-area: item5;
 }
 
+.loadingSection {
+    display: none;
+}
+
 /* Media queries */
 
 @media (max-width: 550px) {
