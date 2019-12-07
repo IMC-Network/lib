@@ -318,14 +318,8 @@ tbody tr:nth-child(2n - 1) {
     overflow-x: auto;
 }
 
-.tableColumnName {
+.tableColumnNoWrap {
     white-space: nowrap;
-}
-
-.tableColumnButtons {
-    width: 120px;
-    min-width: 120px;
-    max-width: 120px;
 }
 
 .left {
