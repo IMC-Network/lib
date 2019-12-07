@@ -433,6 +433,7 @@ tbody tr:nth-child(2n - 1) {
 
 .dialogLoader {
     margin-top: 4vh;
+    text-align: center;
 }
 
 .mainCard {
