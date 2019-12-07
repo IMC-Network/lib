@@ -55,6 +55,10 @@ firebase.auth().onAuthStateChanged(function(user) {
                         }
                     }
                 });
+
+                $(function() {
+                   (userReady || function() {})(); 
+                });
             });
         });
     } else {
