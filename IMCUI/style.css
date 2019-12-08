@@ -123,7 +123,7 @@ button.flat:disabled {
     color: var(--coverTextColour);
 }
 
-input, textarea {
+input, select, textarea {
     padding: 8px;
     padding-left: 10px;
     padding-right: 10px;
@@ -135,7 +135,7 @@ input, textarea {
     transition: 0.5s;
 }
 
-input.spaced, textarea.spaced {
+input.spaced, select.spaced, textarea.spaced {
     margin: 5px;
 }
 
@@ -285,6 +285,10 @@ label > span {
 }
 
 label > input {
+    flex: 1;
+}
+
+label > select {
     flex: 1;
 }
 
