@@ -5,6 +5,10 @@ var currentUser = {
     orgMember: null
 };
 
+var events = {
+    userReady: []
+}
+
 function addProgramme(programme, programmeKey) {
     $("<div class='programmeTile'>")
         .text(programme.textShows != false ? programme.name : "")
@@ -58,7 +62,9 @@ firebase.auth().onAuthStateChanged(function(user) {
                 });
 
                 $(function() {
-                   (userReady || function() {})(); 
+                    for (var target in events.userReady) {
+                        events.userReady[target];
+                    }
                 });
             });
         });
