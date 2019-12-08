@@ -63,7 +63,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
                 $(function() {
                     for (var target in events.userReady) {
-                        events.userReady[target];
+                        events.userReady[target]();
                     }
                 });
             });
