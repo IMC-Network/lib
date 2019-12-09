@@ -135,6 +135,52 @@ input, select, textarea {
     transition: 0.5s;
 }
 
+
+
+input[type="checkbox"], input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    -webkit-appearance: none;
+    padding: 10px;
+    flex: none;
+    background-color: var(--uiInputColour);
+    clip-path: none;
+    cursor: default;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked, input[type="checkbox"]:indeterminate {
+    background-color: var(--uiColour);
+}
+
+input[type="checkbox"]:checked::after {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    color: var(--uiTextColour);
+    font-size: 16px;
+    content: "\2713";
+}
+
+input[type="radio"] {
+    width: 32px;
+    border-radius: 16px;
+}
+
+input[type="radio"]:checked::after {
+    position: absolute;
+    top: -14px;
+    left: 6px;
+    color: var(--uiTextColour);
+    font-size: 52px;
+    content: "\2022";
+}
+
+[dir="rtl"] input[type="radio"]:checked::after {
+    left: unset;
+    right: -2px;
+}
+
 input.spaced, select.spaced, textarea.spaced {
     margin: 5px;
 }
