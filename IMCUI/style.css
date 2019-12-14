@@ -665,6 +665,38 @@ tbody tr:nth-child(2n - 1) {
     display: none;
 }
 
+.iconMenu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.iconMenu > a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-grow: 1;
+    flex-basis: 0;
+    color: var(--foregroundColour);
+    text-align: center;
+    transition: 0.5s opacity;
+}
+
+.iconMenu > a:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.iconMenu > a > i {
+    display: block;
+    padding: 5px;
+    font-size: 60px;
+}
+
+.iconMenu > a > span {
+    display: block;
+    padding: 5px;
+}
+
 /* Media queries */
 
 @media (max-width: 550px) {
@@ -676,6 +708,10 @@ tbody tr:nth-child(2n - 1) {
 
 @media (max-width: 600px) {
     .split > div {
+        flex-basis: 50%;
+    }
+
+    .iconMenu > a {
         flex-basis: 50%;
     }
 }
