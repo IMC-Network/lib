@@ -48,6 +48,11 @@ main.largeTop {
     margin-top: 50px;
 }
 
+main.noFixedHeight {
+    min-height: unset;
+    margin-bottom: 0;
+}
+
 h1 {
     font-size: 30px;
 }
@@ -135,8 +140,6 @@ input, select, textarea {
     transition: 0.5s;
 }
 
-
-
 input[type="checkbox"], input[type="radio"] {
     position: relative;
     display: inline-block;
@@ -194,6 +197,10 @@ input.signIn {
 textarea {
     height: 3em;
     resize: none;
+}
+
+[contenteditable="true"] {
+    outline: none;
 }
 
 header {
@@ -697,24 +704,43 @@ tbody tr:nth-child(2n - 1) {
     padding: 5px;
 }
 
+.paneView {
+    display: flex;
+    flex-flow: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+nav ~ main .paneView, nav ~ main * .paneView {
+    height: calc(100vh - 40px);
+}
+
+header ~ .paneView, header ~ * .paneView {
+    height: calc(100vh - 50px);
+}
+
+nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
+    height: calc(100vh - 90px);
+}
+
+.paneView .leftPane {
+    display: inline-block;
+    height: calc(100% - 20px);
+    padding: 10px;
+    flex: 0 0 230px;
+    background-color: var(--highlightBackgroundColour);
+    overflow: auto;
+}
+
+.paneView .mainView {
+    display: inline-block;
+    height: 100%;
+    flex: 1 0;
+    overflow: auto;
+}
+
 /* Media queries */
-
-@media (max-width: 550px) {
-    .mainCard {
-        left: 50px;
-        width: calc(100% - 130px);
-    }
-}
-
-@media (max-width: 600px) {
-    .split > div {
-        flex-basis: 50%;
-    }
-
-    .iconMenu > a {
-        flex-basis: 50%;
-    }
-}
 
 @media (max-width: 800px) {
     .dialog {
@@ -728,6 +754,28 @@ tbody tr:nth-child(2n - 1) {
 
     .featureGrids > a {
         height: 30vh!important;
+    }
+
+    .mainView {
+        width: 100vw;
+        flex: 1 0 100vw!important;
+    }
+}
+
+@media (max-width: 600px) {
+    .split > div {
+        flex-basis: 50%;
+    }
+
+    .iconMenu > a {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 550px) {
+    .mainCard {
+        left: 50px;
+        width: calc(100% - 130px);
     }
 }
 
