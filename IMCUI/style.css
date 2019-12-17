@@ -740,6 +740,32 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
     overflow: auto;
 }
 
+.paneTitle {
+    margin: -15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255,255, 0.5);
+    font-weight: 700;
+    overflow: nonne;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.paneTitle a {
+    margin-right: 10px;
+    color: var(--foregroundColour);
+    font-weight: initial;
+}
+
+.paneTitle a:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+.paneTitle a i {
+    font-size: unset;
+}
+
 /* Media queries */
 
 @media (max-width: 800px) {
