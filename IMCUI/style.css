@@ -726,8 +726,8 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
 
 .paneView .leftPane {
     display: inline-block;
-    height: calc(100% - 20px);
-    padding: 10px;
+    height: calc(100% - 30px);
+    padding: 15px;
     flex: 0 0 230px;
     background-color: var(--highlightBackgroundColour);
     overflow: auto;
