@@ -118,4 +118,14 @@ $(function() {
             });
         }
     });
+
+    $("body").on("keyup", "details", function(event) {
+        if ($(document.activeElement).is("input") && $(document.activeElement).parent().is("summary") && event.keyCode == 32) {
+            if ($(this).attr("open")) {
+                $(this).removeAttr("open");
+            } else {
+                $(this).attr("open", "");
+            }
+        }
+    });
 });
