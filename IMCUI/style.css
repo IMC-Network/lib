@@ -760,6 +760,7 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
 }
 
 .paneView .leftPane input {
+    width: 100%;
     background-color: var(--backgroundColour);
 }
 
