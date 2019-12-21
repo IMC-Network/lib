@@ -759,6 +759,10 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
     overflow: auto;
 }
 
+.paneView .leftPane input {
+    background-color: var(--backgroundColour);
+}
+
 .paneView .mainView {
     display: inline-block;
     height: 100%;
