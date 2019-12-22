@@ -885,5 +885,5 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
 /* Import overrides */
 
 .material-icons {
-    font-size: unset!important;
+    font-size: unset;
 }
