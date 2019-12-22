@@ -66,6 +66,10 @@ function closeDialog() {
     dialogLastFocus = "body";
 }
 
+function alert(content, title = "Information") {
+    dialog(title, content, [{text: "OK", onclick: "closeDialog();", type: "primary"}]);
+}
+
 function openMenu(menuName) {
     $("[data-menu='" + menuName + "']").fadeIn();
 
