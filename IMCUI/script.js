@@ -74,9 +74,9 @@ function openMenu(menuName) {
     $("[data-menu]:not([data-menu='" + menuName + "'])").fadeOut();
     $("[data-menu='" + menuName + "']").fadeIn();
 
-    $("[data-menu]:not([data-menu='" + menuName + "'])").attr("aria-expanded", "false");
+    $("[data-menu-dropdown]:not([data-menu-dropdown='" + menuName + "'])").attr("aria-expanded", "false");
     $("[data-menu-dropdown='" + menuName + "']").attr("aria-expanded", "true");
-    $("[data-menu]:not([data-menu='" + menuName + "'])").text("arrow_drop_down");
+    $("[data-menu-dropdown-icon]:not([data-menu-dropdown-icon='" + menuName + "'])").text("arrow_drop_down");
     $("[data-menu-dropdown-icon='" + menuName + "']").text("arrow_drop_up");
 
     $("[data-menu='" + menuName + "']").focus();
