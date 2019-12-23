@@ -233,7 +233,8 @@ nav {
     width: calc(100% - 20px);
     height: 40px;
     white-space: nowrap;
-    overflow-y: auto;
+    overflow-x: auto;
+    overflow-y: none;
     background-color: var(--navBackgroundColour);
     color: var(--navForegroundColour);
     z-index: 1;
@@ -856,6 +857,10 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
 }
 
 @media (max-width: 600px) {
+    nav > a.floatRight {
+        float: none;
+    }
+
     .split > div {
         flex-basis: 50%;
     }
