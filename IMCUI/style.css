@@ -279,6 +279,11 @@ nav .menu {
     overflow-y: auto;
 }
 
+nav .menu.farEnd {
+    left: unset;
+    right: 0;
+}
+
 nav .menu a {
     display: block;
     padding: 10px;
@@ -429,6 +434,22 @@ details > div {
 
 [dir="rtl"] .right {
     text-align: left;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+[dir="rtl"] .floatLeft {
+    float: right;
+}
+
+[dir="rtl"] .floatRight {
+    float: left;
 }
 
 .desktop {

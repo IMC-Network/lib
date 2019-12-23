@@ -71,6 +71,7 @@ function alert(content, title = "Information") {
 }
 
 function openMenu(menuName) {
+    $("[data-menu]:not([data-menu='" + menuName + "'])").fadeOut();
     $("[data-menu='" + menuName + "']").fadeIn();
 
     $("[data-menu-dropdown='" + menuName + "']").attr("aria-expanded", "true");
