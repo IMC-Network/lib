@@ -9,6 +9,14 @@
     color: var(--foregroundColour);
 }
 
+.accountSignedIn {
+    display: none;
+}
+
+.accountSignedOut {
+    display: unset;
+}
+
 @media (max-width: 550px) {
     .programmeTile {
         width: calc(50% - 20px);

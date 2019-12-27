@@ -26,6 +26,19 @@ $(function() {
 
                     $(".accountEmail").text(currentUser.email);
 
+                    $(".accountSignedIn").show();
+                    $(".accountSignedOut").hide();
+
+                    $("[aria-menu-dropdown='account']").html("").append([
+                        $(document.createTextNode(currentUser.name)),
+                        $("i")
+                            .attr({
+                                "aria-hidden": "true",
+                                "data-menu-dropdown-icon": "account"
+                            })
+                            .text("arrow_drop_down")
+                    ]);
+
                     for (var target in events.userReady) {
                         events.userReady[target]();
                     }
@@ -49,6 +62,15 @@ $(function() {
             if ($("body").attr("data-sign-out-redirect") != null) {
                 window.location.href = $("body").attr("data-sign-out-redirect");
             }
+
+            $(".accountName").text("User");
+            $(".accountEmail").text("(Unknown)");
+            $(".accountPictureLink").attr("src", "https://imcnetwork.cf/media/AnonymousUser.png");
+
+            $(".accountSignedIn").hide();
+            $(".accountSignedOut").show();
+
+            $("[aria-menu-dropdown='account']").html(`<i aria-hidden="true" class="material-icons" data-menu-dropdown-icon="account">arrow_drop_down</i>`);
         }
     });
 });
