@@ -29,7 +29,7 @@ $(function() {
                     $(".accountSignedIn").show();
                     $(".accountSignedOut").hide();
 
-                    $("[aria-menu-dropdown='account']").html("").append([
+                    $("[data-menu-dropdown='account']").html("").append([
                         $(document.createTextNode(currentUser.name)),
                         $("i")
                             .attr({
@@ -70,7 +70,7 @@ $(function() {
             $(".accountSignedIn").hide();
             $(".accountSignedOut").show();
 
-            $("[aria-menu-dropdown='account']").html(`<i aria-hidden="true" class="material-icons" data-menu-dropdown-icon="account">arrow_drop_down</i>`);
+            $("[data-menu-dropdown='account']").html(`<i aria-hidden="true" class="material-icons" data-menu-dropdown-icon="account">arrow_drop_down</i>`);
         }
     });
 });
