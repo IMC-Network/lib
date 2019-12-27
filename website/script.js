@@ -31,7 +31,7 @@ $(function() {
 
                     $("[data-menu-dropdown='account']").html("").append([
                         $(document.createTextNode(currentUser.name)),
-                        $("<i>")
+                        $("<i class='material-icons'>")
                             .attr({
                                 "aria-hidden": "true",
                                 "data-menu-dropdown-icon": "account"
