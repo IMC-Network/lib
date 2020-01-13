@@ -49,18 +49,18 @@ firebase.auth().onAuthStateChanged(function(user) {
 
                 $(".accountEmail").text(currentUser.email);
 
-                (".accountSignedIn").show();
-                    $(".accountSignedOut").hide();
+                $(".accountSignedIn").show();
+                $(".accountSignedOut").hide();
 
-                    $("[data-menu-dropdown='account']").html("").append([
-                        $(document.createTextNode(currentUser.name)),
-                        $("<i class='material-icons'>")
-                            .attr({
-                                "aria-hidden": "true",
-                                "data-menu-dropdown-icon": "account"
-                            })
-                            .text("arrow_drop_down")
-                    ]);
+                $("[data-menu-dropdown='account']").html("").append([
+                    $(document.createTextNode(currentUser.name)),
+                    $("<i class='material-icons'>")
+                        .attr({
+                            "aria-hidden": "true",
+                            "data-menu-dropdown-icon": "account"
+                        })
+                        .text("arrow_drop_down")
+                ]);
 
                 firebase.database().ref("users/" + currentUser.uid + "/org").once("value", function(orgNameSnapshot) {
                     currentUser.orgName = orgNameSnapshot.val();
