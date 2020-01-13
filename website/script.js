@@ -70,7 +70,7 @@ $(function() {
             $(".accountSignedIn").hide();
             $(".accountSignedOut").show();
 
-            $("[data-menu-dropdown='account']").html(`<i aria-hidden="true" class="material-icons" data-menu-dropdown-icon="account">arrow_drop_down</i>`);
+            $("[data-menu-dropdown='account']").html(`Account <i aria-hidden="true" class="material-icons" data-menu-dropdown-icon="account">arrow_drop_down</i>`);
         }
     });
 });
