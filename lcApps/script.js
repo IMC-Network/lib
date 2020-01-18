@@ -106,6 +106,8 @@ firebase.auth().onAuthStateChanged(function(user) {
             $(".accountPictureLink").attr("src", "https://imcnetwork.cf/media/AnonymousUser.png");
         }
     } else {
-        window.location.href = "https://imcnetwork.cf/LiveCloud/index.html";
+        if ($("body").attr("data-no-sign-out-redirect") == null) {
+                window.location.href = "https://imcnetwork.cf/LiveCloud/index.html";
+            }
     }
 });
