@@ -35,6 +35,10 @@ function addProgramme(programme, programmeKey) {
     ;
 }
 
+function signOut() {
+    firebase.auth().signOut();
+}
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         currentUser.uid = user.uid;
