@@ -9,6 +9,10 @@ var currentUser = _currentUserTemplate;
 var events = {
     userReady: [],
     userSignedOut: []
+};
+
+function signOut() {
+    firebase.auth().signOut();
 }
 
 $(function() {
