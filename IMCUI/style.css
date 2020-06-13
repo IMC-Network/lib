@@ -413,6 +413,10 @@ details > div {
     margin-bottom: 10px;
 }
 
+iframe {
+    border: none;
+}
+
 .tableHolder {
     overflow-x: auto;
 }
