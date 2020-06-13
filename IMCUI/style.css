@@ -194,6 +194,10 @@ input[type="radio"]:checked::after {
     right: -2px;
 }
 
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
 input.spaced, select.spaced, textarea.spaced {
     margin: 5px;
 }
