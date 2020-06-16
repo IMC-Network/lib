@@ -1,0 +1,93 @@
+.video-js .vjs-big-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    margin: calc(-75px / 2);
+    padding: 20px;
+    background-color: var(--uiColour);
+    color: var(--uiTextColour);
+    border: none;
+    border-radius: 0;
+}
+
+.video-js:hover .vjs-big-play-button {
+    background-color: var(--uiHoverColour);
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+    top: 15px;
+    font-size: 50px;
+}
+
+.video-js .vjs-control-bar {
+    background-color: rgba(0, 0, 0, 0.6)!important;
+}
+
+.video-js .vjs-control:hover:not(.vjs-progress-control):not(.vjs-time-control) {
+    background-color: var(--uiColour);
+    clip-path: none;
+    text-shadow: none;
+}
+
+.video-js .vjs-play-progress.vjs-slider-bar {
+    background-color: var(--uiColour);
+}
+
+.video-js .vjs-loading-spinner::before, .video-js .vjs-loading-spinner::after {
+    display: none;
+}
+
+.video-js .vjs-loading-spinner {
+    width: 75px;
+    height: 75px;
+    margin: calc(-75px / 2);
+    background-image: url("https://imcnetwork.cf/LiveCloud/media/Loader.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: unset;
+    border: none;
+    border-radius: 0;
+    visibility: visible;
+    animation: 0.5s spinner step-end;
+    animation-iteration-count: infinite;
+}
+
+.video-js .vjs-progress-control {
+    background: none;
+}
+
+.video-js .vjs-time-tooltip {
+    background-color: var(--backgroundColour);
+    color: var(--foregroundColour);
+    border-radius: 0;
+}
+
+.video-js .vjs-play-progress .vjs-time-tooltip {
+    background-color: var(--uiColour);
+    color: var(--uiTextColour);
+}
+
+.video-js .vjs-text-track-cue, .video-js .vjs-text-track-cue * {
+    font-family: "Roboto", sans-serif;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+}
