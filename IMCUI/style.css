@@ -91,10 +91,6 @@ a:hover {
     text-decoration: underline;
 }
 
-div.spacedTop {
-    margin-top: 10px;
-}
-
 button {
     padding: 8px;
     padding-left: 10px;
@@ -473,6 +469,14 @@ hr {
 
 .mobile {
     display: none;
+}
+
+.spacedTop {
+    margin-top: 10px;
+}
+
+.spacedBottom {
+    margin-bottom: 10px;
 }
 
 .split {
