@@ -795,7 +795,7 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
     height: calc(100vh - 90px);
 }
 
-.paneView .leftPane {
+.paneView .leftPane, .paneView .rightPane {
     display: inline-block;
     height: calc(100% - 30px);
     padding: 15px;
@@ -804,9 +804,14 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
     overflow: auto;
 }
 
-.paneView .leftPane input {
+.paneView .leftPane input, .paneView .rightPane input {
     width: 100%;
     background-color: var(--backgroundColour);
+}
+
+.paneView.wide .leftPane, .paneView.wide .rightPane {
+    flex: 0 0 30vw;
+    min-width: 300px;
 }
 
 .paneView .mainView {
@@ -913,6 +918,10 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
 
     .itemlist > a {
         width: 100%;
+    }
+
+    .paneView.wide .leftPane, .paneView.wide .rightPane {
+        min-width: calc(100vw - 30px);
     }
 }
 
