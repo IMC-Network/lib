@@ -417,6 +417,12 @@ iframe {
     border: none;
 }
 
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
 .tableHolder {
     overflow-x: auto;
 }
