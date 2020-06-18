@@ -853,6 +853,24 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
     font-size: unset;
 }
 
+button.libraryItem {
+    width: calc(20% - 20px);
+    margin: 10px;
+    clip-path: none;
+    background-color: transparent;
+    color: inherit;
+}
+
+button.libraryItem:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.libraryItemThumbnail {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
 /* Media queries */
 
 @media (max-width: 800px) {
