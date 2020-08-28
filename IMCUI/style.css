@@ -814,7 +814,7 @@ nav ~ main header ~ .paneView, nav ~ main header ~ * .paneView {
     overflow: auto;
 }
 
-.paneView .leftPane input, .paneView .rightPane input, .paneView .leftPane textarea .paneView .rightPane textarea {
+.paneView .leftPane input, .paneView .rightPane input, .paneView .leftPane textarea, .paneView .rightPane textarea {
     width: 100%;
     background-color: var(--backgroundColour);
 }
